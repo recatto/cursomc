@@ -1,1 +1,1 @@
-# Curso Spring Boot, Hibernate, REST, Ionic, JWT, S3, MySQL, MongoDB #udemy
+# Curso Spring Boot, Hibernate, REST, Ionic, JWT, S3, MySQL, MongoDB
