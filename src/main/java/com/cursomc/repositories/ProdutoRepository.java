@@ -16,6 +16,6 @@ import com.cursomc.domain.Produto;
 public interface ProdutoRepository extends JpaRepository<Produto, Integer> {
 	
 	@Transactional(readOnly=true)
-	Page<Produto> findDistinctByNomeContainingAndCategoriasasIn(String nome, List<Categoria> categorias, Pageable pageRequest);
+	Page<Produto> findDistinctByNomeContainingAndCategoriasIn(String nome, List<Categoria> categorias, Pageable pageRequest);
 	
 }
