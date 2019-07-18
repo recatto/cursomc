@@ -147,18 +147,20 @@ public class Pedido implements Serializable {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Pedido número: ");
 		builder.append(getId());
-		builder.append(", Instante: ");
+		builder.append(" - Data: ");
 		builder.append(sdf.format(getInstante()));
-		builder.append(", Cliente: ");
+		builder.append("\nCliente: ");
 		builder.append(getCliente().getNome());
-		builder.append(", Situação do Pagamento: ");
+		builder.append("\nSituação do Pagamento: ");
 		builder.append(getPagamento().getEstado().getDescricao());
-		builder.append("\nDetalhes:\n");
+		builder.append("\n========== Detalhes ==========\n");
 		for (ItemPedido ip : getItens()) {
 			builder.append(ip.toString());
+			builder.append("-------------------------------------------\n");
 		}
-		builder.append("Valor Total: ");
+		builder.append("Valor Total da Compra: ");
 		builder.append(nf.format(getValorTotal()));
+		builder.append("\n------------------------------------------------------------------------------");
 		
 		return builder.toString();
 	}
